@@ -32,9 +32,9 @@ class Chainctl < Formula
   end
 
   def install
-    cpu = Hardware::CPU.intel? ? "x86_64" : "arm64"
-    os = OS.mac? ? "Darwin" : "Linux"
-    bin.install "chainctl_#{os}_#{cpu}" => "chainctl"
+    bin.install Dir["*"]
+    # TODO: Why does binary get installed as "us.artifacts.prod-enforce-fabc.appspot.com"?
+    mv "#{bin}/us.artifacts.prod-enforce-fabc.appspot.com", "#{bin}/chainctl"
   end
 
   test do
