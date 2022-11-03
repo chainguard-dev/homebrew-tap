@@ -9,25 +9,25 @@ class Chainctl < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl_Darwin_x86_64"
-      sha256 "0f191ae569dac3f24cdb0f531617544716e1019946e4e5cd1b9fe1bf1098816f"
+      url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Darwin_x86_64"
+      sha256 "1c1f9bd65e93d5e47dbe27481b1074f3a5b70377c0241916b5d15150ea692772"
     end
 
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl_Darwin_arm64"
-      sha256 "02c05e781f1f88b678f7aa3ae9717b034d0c8cc55703c6e713bd5846edfee033"
+      url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Darwin_arm64"
+      sha256 "b03ea05750b4dc68f6a33c5bd35a4f51a9b49816027c24fd8e45acc406416154"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl_Linux_x86_64"
-      sha256 "668a52ea57b8e3a309a7d212497a9d43d9ae568367cfaf0e8b61aff3e17c0aa1"
+      url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Linux_x86_64"
+      sha256 "10151094cdd78fd2b11919a0a50f84e71988f2ae3c8feddace848f5f45e3f83a"
     end
 
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl_Linux_arm64"
-      sha256 "10446c98db6a922144e1896cf61989e7c72b3b1bb47c3a7160fe3de40e77f3da"
+      url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Linux_arm64"
+      sha256 "32632ab153898fa766970cb94e40de5be74499f8a375070910a6e9f1851e6ba7"
     end
   end
 
