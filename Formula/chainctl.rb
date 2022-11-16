@@ -4,30 +4,30 @@
 class Chainctl < Formula
   desc "Chainguard Control"
   homepage "https://chainguard.dev"
-  version "0.1.26"
+  version "0.1.27"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Darwin_x86_64"
-      sha256 "b0e172adc0a0865e9452fe2c25c97f35dd5fa7446a01d91bffcbead76608071d"
+      sha256 "418920b5a8e3bcf86ecc99aec8c13c8346d278cae38c00af1fc7adbd2b677de0"
     end
 
     if Hardware::CPU.arm?
       url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Darwin_arm64"
-      sha256 "697c79be22e246e1f7e85ea58ba19e37c219d816cc68ba5ab6fda228f718a721"
+      sha256 "479b646bbbb7e53b1ca12d78525c5c613bc35021c6260c39d1c3a9f0596de331"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Linux_x86_64"
-      sha256 "2d0a280b2508b5ee442bd1c6a61c51210caecee10ee320df9bb7c52f82b67830"
+      sha256 "f8c2b5cb28a6766395e613847402620be20c68c6b9b262f3f5cb774a2c1e600d"
     end
 
     if Hardware::CPU.arm?
       url "https://dl.enforce.dev/chainctl/v#{version}/chainctl_Linux_arm64"
-      sha256 "ac5c45440656bb515141fc4d72e17e4dd0830ccb234dc036f4473337bb8daeaf"
+      sha256 "7fdbe773203d97f8c009e50e887e169e309b618b08a4223af1f9811a643cc64c"
     end
   end
 
