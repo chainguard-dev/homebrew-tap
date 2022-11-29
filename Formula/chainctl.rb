@@ -5,42 +5,42 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.1.36"
+  version "0.1.37"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.36/chainctl_darwin_amd64"
-      sha256 "08839601b96cfb7ba4fdf3540d8570aaf2142d45f8a4a6316bf01122b44d6f7a"
+      url "https://dl.enforce.dev/chainctl/0.1.37/chainctl_darwin_amd64"
+      sha256 "355fe48293c2ab4d9f6837cf56d407769bbba4b83e6b25fa10c53579171e2759"
 
       def install
-        bin.install "chainctl_darwin_amd64" => "chainctl"
+        bin.install "chainctl_darwin_amd64" => "chainctl_darwin_amd64"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.1.36/chainctl_darwin_arm64"
-      sha256 "5504b3371b2c9303de96793c83be28ac74676b7345679451e9006ddc2edf720a"
+      url "https://dl.enforce.dev/chainctl/0.1.37/chainctl_darwin_arm64"
+      sha256 "8574e815c212e8639bdabce5aeea6cf21da89acfcd8913b459367b64e50832a3"
 
       def install
-        bin.install "chainctl_darwin_arm64" => "chainctl"
+        bin.install "chainctl_darwin_arm64" => "chainctl_darwin_arm64"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.1.36/chainctl_linux_arm64"
-      sha256 "7dcac181d2610b4f9533d94c7859a762db2598b92dee4a9f0bb3036906a68385"
+      url "https://dl.enforce.dev/chainctl/0.1.37/chainctl_linux_arm64"
+      sha256 "520219c081ef7567973aced60be7a9430f0aa658cbbd95c44b2340e4e054cf6e"
 
       def install
-        bin.install "chainctl_linux_arm64" => "chainctl"
+        bin.install "chainctl_linux_arm64" => "chainctl_linux_arm64"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.36/chainctl_linux_amd64"
-      sha256 "ec784d425fc838aca33608a27788247d5cae193a9a8db98f7f9fae1387e6ba2b"
+      url "https://dl.enforce.dev/chainctl/0.1.37/chainctl_linux_amd64"
+      sha256 "88e658ffe6745a6a4717d735398f4fe3c0f1280668967429271bd621b47cad47"
 
       def install
-        bin.install "chainctl_linux_amd64" => "chainctl"
+        bin.install "chainctl_linux_amd64" => "chainctl_linux_amd64"
       end
     end
   end
