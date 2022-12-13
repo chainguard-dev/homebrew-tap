@@ -13,7 +13,7 @@ class Chainctl < Formula
       sha256 "6dab4523fa633febcb2fda658e88ef0ca1fbfa4d46ebc95c56da76cce8b21d30"
 
       def install
-        bin.install "chainctl_darwin_amd64" => "chainctl_darwin_amd64"
+        bin.install "chainctl_darwin_amd64" => "chainctl"
       end
     end
     if Hardware::CPU.arm?
@@ -21,7 +21,7 @@ class Chainctl < Formula
       sha256 "b5c0f903c634c910eca167588baefc872a7fd25dd1b47ee44696be31608ed437"
 
       def install
-        bin.install "chainctl_darwin_arm64" => "chainctl_darwin_arm64"
+        bin.install "chainctl_darwin_arm64" => "chainctl"
       end
     end
   end
@@ -32,7 +32,7 @@ class Chainctl < Formula
       sha256 "8a08822e6d8e328387673fcb202937d3e69f5a2c4cee204b1fa82dd954c8190d"
 
       def install
-        bin.install "chainctl_linux_arm64" => "chainctl_linux_arm64"
+        bin.install "chainctl_linux_arm64" => "chainctl"
       end
     end
     if Hardware::CPU.intel?
@@ -40,7 +40,7 @@ class Chainctl < Formula
       sha256 "a693e4eeeebf833b3e4f8a2df7396f7576c76002106f255fe0fc4fee3ec7ea9e"
 
       def install
-        bin.install "chainctl_linux_amd64" => "chainctl_linux_amd64"
+        bin.install "chainctl_linux_amd64" => "chainctl"
       end
     end
   end
