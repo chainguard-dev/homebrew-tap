@@ -5,43 +5,75 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.1.47"
+  version "0.1.49"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.47/chainctl_darwin_x86_64"
-      sha256 "3c895c2fa4fa4001d5a8f57fe6a2c97a2eec3f8c75fe42caad956c4f152e0d37"
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_darwin_x86_64"
+      sha256 "088e984c06dc4eacd28006ee7594a61306417ecad49ada5f4de65c5c742773db"
 
       def install
         bin.install "chainctl_darwin_x86_64" => "chainctl"
+
+        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
+        (bash_completion/"chainctl").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
+        (zsh_completion/"_chainctl").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
+        (fish_completion/"chainctl.fish").write fish_output
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.1.47/chainctl_darwin_arm64"
-      sha256 "6c1404a59cbbd9de6577166e3203d36369f9051c03ee1a6c6f652492eab92ed8"
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_darwin_arm64"
+      sha256 "5360a103dd8a1af6a7f79d541357bac6cd857dd69dd5b10cfb09d5ed8707c546"
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
+
+        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
+        (bash_completion/"chainctl").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
+        (zsh_completion/"_chainctl").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
+        (fish_completion/"chainctl.fish").write fish_output
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.47/chainctl_linux_x86_64"
-      sha256 "a2bd911396e6839937795d1b637a54ec7795c48407360a5cc69d059762bb3722"
-
-      def install
-        bin.install "chainctl_linux_x86_64" => "chainctl"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.1.47/chainctl_linux_arm64"
-      sha256 "073018a41478c4eafa7d09e79bf22b2aaa0130724198907b35b3a66b3423d161"
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_arm64"
+      sha256 "35a309626a4d7561068653a5942b1a72cda048e8e0a61e543fe63d4aef3549af"
 
       def install
         bin.install "chainctl_linux_arm64" => "chainctl"
+
+        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
+        (bash_completion/"chainctl").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
+        (zsh_completion/"_chainctl").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
+        (fish_completion/"chainctl.fish").write fish_output
       end
     end
+    if Hardware::CPU.intel?
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_x86_64"
+      sha256 "38e2c581262e02598e092df74fec6891f058a861b7b54032ad8981fdb0c62c25"
+
+      def install
+        bin.install "chainctl_linux_x86_64" => "chainctl"
+
+        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
+        (bash_completion/"chainctl").write bash_output
+        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
+        (zsh_completion/"_chainctl").write zsh_output
+        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
+        (fish_completion/"chainctl.fish").write fish_output
+      end
+    end
+  end
+
+  test do
+    system "#{bin}/chainctl version"
   end
 end
