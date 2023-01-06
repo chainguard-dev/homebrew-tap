@@ -10,7 +10,7 @@ class Chainctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_darwin_x86_64"
-      sha256 "088e984c06dc4eacd28006ee7594a61306417ecad49ada5f4de65c5c742773db"
+      sha256 "c1d4bf9a411ac492f8a6908784f94bec8e9454f451e78a30c9f9a93e894fba6f"
 
       def install
         bin.install "chainctl_darwin_x86_64" => "chainctl"
@@ -25,7 +25,7 @@ class Chainctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_darwin_arm64"
-      sha256 "5360a103dd8a1af6a7f79d541357bac6cd857dd69dd5b10cfb09d5ed8707c546"
+      sha256 "c4949ba10e8edb99b20e94fd63a96f9eac04ce8faa7f77735857b8a2981ecd15"
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
@@ -41,12 +41,12 @@ class Chainctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_arm64"
-      sha256 "35a309626a4d7561068653a5942b1a72cda048e8e0a61e543fe63d4aef3549af"
+    if Hardware::CPU.intel?
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_x86_64"
+      sha256 "caafb5c344f22a6eaae354025f21a9528e337fe8db0c843af0c98f7c72a65be7"
 
       def install
-        bin.install "chainctl_linux_arm64" => "chainctl"
+        bin.install "chainctl_linux_x86_64" => "chainctl"
 
         bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
         (bash_completion/"chainctl").write bash_output
@@ -56,12 +56,12 @@ class Chainctl < Formula
         (fish_completion/"chainctl.fish").write fish_output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_x86_64"
-      sha256 "38e2c581262e02598e092df74fec6891f058a861b7b54032ad8981fdb0c62c25"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.enforce.dev/chainctl/0.1.49/chainctl_linux_arm64"
+      sha256 "a3a10f26d57e093cb9a6242e3fb931fbec2e3ca959452c79b794d8f0369d9bdb"
 
       def install
-        bin.install "chainctl_linux_x86_64" => "chainctl"
+        bin.install "chainctl_linux_arm64" => "chainctl"
 
         bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
         (bash_completion/"chainctl").write bash_output
