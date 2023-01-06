@@ -14,13 +14,6 @@ class Chainctl < Formula
 
       def install
         bin.install "chainctl_darwin_x86_64" => "chainctl"
-
-        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
-        (bash_completion/"chainctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
-        (zsh_completion/"_chainctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
-        (fish_completion/"chainctl.fish").write fish_output
       end
     end
     if Hardware::CPU.arm?
@@ -29,13 +22,6 @@ class Chainctl < Formula
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
-
-        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
-        (bash_completion/"chainctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
-        (zsh_completion/"_chainctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
-        (fish_completion/"chainctl.fish").write fish_output
       end
     end
   end
@@ -47,13 +33,6 @@ class Chainctl < Formula
 
       def install
         bin.install "chainctl_linux_x86_64" => "chainctl"
-
-        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
-        (bash_completion/"chainctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
-        (zsh_completion/"_chainctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
-        (fish_completion/"chainctl.fish").write fish_output
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -62,18 +41,11 @@ class Chainctl < Formula
 
       def install
         bin.install "chainctl_linux_arm64" => "chainctl"
-
-        bash_output = Utils.safe_popen_read(bin/"chainctl", "completion", "bash")
-        (bash_completion/"chainctl").write bash_output
-        zsh_output = Utils.safe_popen_read(bin/"chainctl", "completion", "zsh")
-        (zsh_completion/"_chainctl").write zsh_output
-        fish_output = Utils.safe_popen_read(bin/"chainctl", "completion", "fish")
-        (fish_completion/"chainctl.fish").write fish_output
       end
     end
   end
 
   test do
-    system "#{bin}/chainctl version"
+    system "#{bin}/chainctl", "version"
   end
 end
