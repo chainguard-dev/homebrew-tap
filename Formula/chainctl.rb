@@ -46,6 +46,6 @@ class Chainctl < Formula
   end
 
   test do
-    system "#{bin}/chainctl version"
+    system "#{bin}/chainctl", "version"
   end
 end
