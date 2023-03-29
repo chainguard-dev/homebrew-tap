@@ -1,20 +1,20 @@
 class Apko < Formula
   desc "Build and publish OCI container images built from apk packages"
   homepage "https://github.com/chainguard-dev/apko"
-  version "0.7.1"
+  version "0.7.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.1/apko_0.7.1_darwin_arm64.tar.gz"
-      sha256 "40dc2f2d1be035d3da4d439c9021efa68531fb2153df2b7952bbb1d0f61f415e"
+      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.3/apko_0.7.3_darwin_arm64.tar.gz"
+      sha256 "cbec7bf4f2532466bc47ae12e9128cf6c0534dd2cf0340830feed0c9a5c79a6e"
 
       def install
         bin.install "apko"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.1/apko_0.7.1_darwin_amd64.tar.gz"
-      sha256 "4a89ea34a1d230084054ef85a81162a49a0115495c7bd46713dbe31859f3c0ba"
+      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.3/apko_0.7.3_darwin_amd64.tar.gz"
+      sha256 "dc2a36106335a30f6bd5edf40bc16b13c9fc6a80d891420cd3a79c2aa5da5bd1"
 
       def install
         bin.install "apko"
@@ -24,16 +24,16 @@ class Apko < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.1/apko_0.7.1_linux_arm64.tar.gz"
-      sha256 "72859722b1dac7dc4ca777ff228c82d495d74038a2359d1bd00e59f7b70d47b3"
+      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.3/apko_0.7.3_linux_arm64.tar.gz"
+      sha256 "416ea9be33047d701a13829ab9d85a7ef6aa17f82196a92b84ef64700e1e763b"
 
       def install
         bin.install "apko"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.1/apko_0.7.1_linux_amd64.tar.gz"
-      sha256 "5a3bb61a5adc2020c2a8ce85c46cadbc0cb8075fdd3ba9f73dbc86bfd757f8d3"
+      url "https://github.com/chainguard-dev/apko/releases/download/v0.7.3/apko_0.7.3_linux_amd64.tar.gz"
+      sha256 "c9d490461fbaebea818455a8c838ea20a3fd1c6085f1dfd7b215d0a999da0f4b"
 
       def install
         bin.install "apko"
