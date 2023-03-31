@@ -5,7 +5,7 @@ class Melange < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.3.2/apko_0.3.2_darwin_arm64.tar.gz"
+      url "https://github.com/chainguard-dev/melange/releases/download/v0.3.2/melange_0.3.2_darwin_arm64.tar.gz"
       sha256 "c5b06be8c3c40144025213a5cf8a45c53b531b7c69319e73957f4e6fb041cdf4"
 
       def install
