@@ -1,20 +1,20 @@
 class Apko < Formula
   desc "Build and publish OCI container images built from apk packages"
   homepage "https://github.com/chainguard-dev/apko"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.8.0/apko_0.8.0_darwin_arm64.tar.gz"
-      sha256 "70666cddb7c95b614e27af037aaa61d6bb5c46bd8be78a3e750f6b6dce970f9e"
+      url "https://github.com/chainguard-dev/apko/releases/download/v#{version}/apko_#{version}_darwin_arm64.tar.gz"
+      sha256 "8ff96409de2a1f2eba4a5c4dda96c6005d66a345cb26e78862a7320d5a415c89"
 
       def install
         bin.install "apko"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.8.0/apko_0.8.0_darwin_amd64.tar.gz"
-      sha256 "10663cba9685115762577a8031aa4807121440327ea89c4d7e05ca65cbff44ff"
+      url "https://github.com/chainguard-dev/apko/releases/download/v#{version}/apko_#{version}_darwin_amd64.tar.gz"
+      sha256 "1386f8ad7e0b7da04882db0f6cd4dd2e3ffd820c646859c11af2a465c657c8d7"
 
       def install
         bin.install "apko"
@@ -24,16 +24,16 @@ class Apko < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.8.0/apko_0.8.0_linux_arm64.tar.gz"
-      sha256 "9af76d6f5552d587acc517ce5f7bbae66fdb8b5509a665b3380b66cc62987b34"
+      url "https://github.com/chainguard-dev/apko/releases/download/v#{version}/apko_#{version}_linux_arm64.tar.gz"
+      sha256 "8978df010b307092f9ec683deb983753040d1880e19cc62e16adbfe3b630c651"
 
       def install
         bin.install "apko"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/apko/releases/download/v0.8.0/apko_0.8.0_linux_amd64.tar.gz"
-      sha256 "73ee1fae4bfe50bb7886fa9f2d802ef8bf4a3eb638ca72ffd3f47156df2b23dd"
+      url "https://github.com/chainguard-dev/apko/releases/download/v#{version}/apko_#{version}_linux_amd64.tar.gz"
+      sha256 "fcccc3607a2ec61050669fdc77d9ee1265a922b8a4f1b38166777efec9861d16"
 
       def install
         bin.install "apko"
