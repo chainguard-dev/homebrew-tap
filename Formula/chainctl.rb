@@ -5,42 +5,42 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.1.169"
+  version "0.1.170"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.169/chainctl_darwin_x86_64"
-      sha256 "669178f3ba576c4284aaf2b2a268e823dca6f6c9745d7b40c65b2e03baa9f7a4"
-
-      def install
-        bin.install "chainctl_darwin_x86_64" => "chainctl"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.1.169/chainctl_darwin_arm64"
-      sha256 "7e812ded768613da2df771d47e7390781c1d86e247300b67955f5a1a4a9d5bc6"
+      url "https://dl.enforce.dev/chainctl/0.1.170/chainctl_darwin_arm64"
+      sha256 "0fcac842622ae74273bfece08ae5f2dff5917d8a35b3895e55da0acccaa644e2"
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
       end
     end
+    if Hardware::CPU.intel?
+      url "https://dl.enforce.dev/chainctl/0.1.170/chainctl_darwin_x86_64"
+      sha256 "9ac13e3b298c3f786375b6a05dd8d30c783e3e00f5d09e00d1aa6fb6b68f80df"
+
+      def install
+        bin.install "chainctl_darwin_x86_64" => "chainctl"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.1.169/chainctl_linux_arm64"
-      sha256 "48c805c91e53c11200654f7dde1e1699a78099b8f2b1339cccaa2362b1330af5"
-
-      def install
-        bin.install "chainctl_linux_arm64" => "chainctl"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.169/chainctl_linux_x86_64"
-      sha256 "4918529a4d234a36a31aa68214af004853b6545998c56d723e3cb1cc32be869f"
+      url "https://dl.enforce.dev/chainctl/0.1.170/chainctl_linux_x86_64"
+      sha256 "7e55e586a17d6e70b082971abcd63a0d299d088eb6dd19cf41e899c9648a5c56"
 
       def install
         bin.install "chainctl_linux_x86_64" => "chainctl"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.enforce.dev/chainctl/0.1.170/chainctl_linux_arm64"
+      sha256 "460b6f395e5e6e92fd72b4bb1ebb82bcf83d5ea41f434c2fd6d704a31aedcaef"
+
+      def install
+        bin.install "chainctl_linux_arm64" => "chainctl"
       end
     end
   end
