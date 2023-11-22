@@ -5,39 +5,39 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.1.197"
+  version "0.1.198"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.197/chainctl_darwin_x86_64"
-      sha256 "52be55ee81986b408aaccff991574724f3ab3679a16118ff3b2dce7089f525de"
-
-      def install
-        bin.install "chainctl_darwin_x86_64" => "chainctl"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.1.197/chainctl_darwin_arm64"
-      sha256 "e129113f865fd38f717b5c8917f8e08a43527cb4e9212b7f8d4cc4986583934b"
+      url "https://dl.enforce.dev/chainctl/0.1.198/chainctl_darwin_arm64"
+      sha256 "3a652b75109d49018090b6747d110eefc81f3c4175d6201f56ef27e2c81227ce"
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://dl.enforce.dev/chainctl/0.1.198/chainctl_darwin_x86_64"
+      sha256 "f1af209805c34c221ee6f94207d39b003f673aa1658ee6d1ce35c90abf822065"
+
+      def install
+        bin.install "chainctl_darwin_x86_64" => "chainctl"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.1.197/chainctl_linux_x86_64"
-      sha256 "455048f7bf3dca85a042f1ebb2bcb6e42b07befd3dd17eb0f82af541f9e581e1"
+      url "https://dl.enforce.dev/chainctl/0.1.198/chainctl_linux_x86_64"
+      sha256 "d6accd16381bfd2efbee879fd15e7dc3197a50001d62d4a7662d253132c3cb1e"
 
       def install
         bin.install "chainctl_linux_x86_64" => "chainctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.1.197/chainctl_linux_arm64"
-      sha256 "3524c97bf056ecd7b53bb6e67dfdc208ab2ceb3426524b78b62c4554e0939812"
+      url "https://dl.enforce.dev/chainctl/0.1.198/chainctl_linux_arm64"
+      sha256 "dd495c4418f99d6c2f1692cd63371798438aa7abd49049e2e9ebfeac47de0c70"
 
       def install
         bin.install "chainctl_linux_arm64" => "chainctl"
