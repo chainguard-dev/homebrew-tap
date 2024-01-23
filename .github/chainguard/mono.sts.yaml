@@ -1,7 +1,7 @@
 # Allow release tags from our mono repo running the release drop
 # workflow to push to the homebrew repo to publish chainctl updates.
 issuer: https://token.actions.githubusercontent.com
-subject: repo:chainguard-dev/mono:ref:refs/tags/v.*
+subject_pattern: repo:chainguard-dev/mono:ref:refs/tags/v.*
 claim_pattern:
   job_workflow_ref: chainguard-dev/mono/.github/workflows/.release-drop.yaml@.*
 
