@@ -5,20 +5,20 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.1.314"
+  version "0.1.315"
 
   on_macos do
     on_intel do
-      url "https://dl.enforce.dev/chainctl/0.1.314/chainctl_darwin_x86_64"
-      sha256 "079660060f4edc2dd20684822e42e077c81141aec27e4b6b7a265932c1f1c112"
+      url "https://dl.enforce.dev/chainctl/0.1.315/chainctl_darwin_x86_64"
+      sha256 "2cc08c335d8912664b39b3da1b458d8a57ee9d06978967f9c910a091e9ab1776"
 
       def install
         bin.install "chainctl_darwin_x86_64" => "chainctl"
       end
     end
     on_arm do
-      url "https://dl.enforce.dev/chainctl/0.1.314/chainctl_darwin_arm64"
-      sha256 "669a3d600035ceaf00cacb7a33678aa38177dd9eb8abd463c157a3b89cbc6106"
+      url "https://dl.enforce.dev/chainctl/0.1.315/chainctl_darwin_arm64"
+      sha256 "b2be664114147765d6a2729edba0b51911e07e86f172ab9a1664a8933d3a8dbd"
 
       def install
         bin.install "chainctl_darwin_arm64" => "chainctl"
@@ -29,8 +29,8 @@ class Chainctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://dl.enforce.dev/chainctl/0.1.314/chainctl_linux_x86_64"
-        sha256 "b4f09c17454206924080bf81e9bb134cbc3c448e347aa4e450d762ffc1a8f8ac"
+        url "https://dl.enforce.dev/chainctl/0.1.315/chainctl_linux_x86_64"
+        sha256 "b7614e9735cb379f87f402bdf4a7741619c67e650e1a2731ab1148a056d790ce"
 
         def install
           bin.install "chainctl_linux_x86_64" => "chainctl"
@@ -39,8 +39,8 @@ class Chainctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://dl.enforce.dev/chainctl/0.1.314/chainctl_linux_arm64"
-        sha256 "61418f01eecbda15706212f9a48a708434b837f0bf4dd7b9d60747134604df31"
+        url "https://dl.enforce.dev/chainctl/0.1.315/chainctl_linux_arm64"
+        sha256 "428832e3edc5a05ec5baf45d9a247d74bef2551206026a8c8831107233d2bc7c"
 
         def install
           bin.install "chainctl_linux_arm64" => "chainctl"
