@@ -1,7 +1,7 @@
 # Allow release tags from our melange repo running the release workflow to
 # push to the homebrew repo to publish melange releases.
 issuer: https://token.actions.githubusercontent.com
-subject_pattern: repo:chainguard-dev/melange:ref:refs/tags/v.*
+subject_pattern: repo:chainguard-dev/melange:ref:refs/heads/main
 claim_pattern:
   job_workflow_ref: chainguard-dev/melange/.github/workflows/release.yaml@.*
 
