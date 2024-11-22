@@ -5,20 +5,20 @@
 class Melange < Formula
   desc "Build apk packages using declarative pipelines"
   homepage "https://github.com/chainguard-dev/melange"
-  version "0.15.12"
+  version "0.15.13"
 
   on_macos do
     on_intel do
-      url "https://github.com/chainguard-dev/melange/releases/download/v0.15.12/melange_0.15.12_darwin_amd64.tar.gz"
-      sha256 "3f8f9ddb40be19ee6b3051e75142c0a8ec0ed3cef8aa2c56ba57e8a5d5656e0a"
+      url "https://github.com/chainguard-dev/melange/releases/download/v0.15.13/melange_0.15.13_darwin_amd64.tar.gz"
+      sha256 "b527cf0b3dc285b0b888c48ce4d103d097e5ddb019d2069b67d8ff62488a150b"
 
       def install
         bin.install "melange" => "melange"
       end
     end
     on_arm do
-      url "https://github.com/chainguard-dev/melange/releases/download/v0.15.12/melange_0.15.12_darwin_arm64.tar.gz"
-      sha256 "225f10d59d8756b62c1ecfcaf2948ff5b2dde6a9ec6f68bd356b9c439287dfef"
+      url "https://github.com/chainguard-dev/melange/releases/download/v0.15.13/melange_0.15.13_darwin_arm64.tar.gz"
+      sha256 "a55ad7334eba8a8a1e6e954106a98dc820507c11e73332eca2d67cc5a5dd75b3"
 
       def install
         bin.install "melange" => "melange"
@@ -29,8 +29,8 @@ class Melange < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chainguard-dev/melange/releases/download/v0.15.12/melange_0.15.12_linux_amd64.tar.gz"
-        sha256 "9a7c726a211660ff069d7e4becb3cbd27a37306a6146bed9bda96c11ac1a0014"
+        url "https://github.com/chainguard-dev/melange/releases/download/v0.15.13/melange_0.15.13_linux_amd64.tar.gz"
+        sha256 "ffefcf26ec7ecc95766d7db3a748256689c43e9a5268f057d12ea9f72f9dec17"
 
         def install
           bin.install "melange" => "melange"
@@ -39,8 +39,8 @@ class Melange < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chainguard-dev/melange/releases/download/v0.15.12/melange_0.15.12_linux_arm64.tar.gz"
-        sha256 "f3b45ff1198e7cd97bf0560f00e33dc45cf85a1eb0ae2a60b24437d1e9ffbd87"
+        url "https://github.com/chainguard-dev/melange/releases/download/v0.15.13/melange_0.15.13_linux_arm64.tar.gz"
+        sha256 "d7b12b9c85bb6a89dc52aaa8c298e148ba029b723d308147d10f68781bf3da97"
 
         def install
           bin.install "melange" => "melange"
