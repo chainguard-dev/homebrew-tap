@@ -1,3 +1,4 @@
 {
-  "apko": "homebrew/core"
+  "apko": "homebrew/core",
+  "melange": "homebrew/core"
 }
