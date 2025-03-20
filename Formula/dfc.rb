@@ -1,12 +1,12 @@
 class Dfc < Formula
   desc "Convert Dockerfiles to use Chainguard"
   homepage "https://github.com/chainguard-dev/dfc"
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/chainguard-dev/dfc/releases/download/v#{version}/dfc_#{version}_darwin_arm64.tar.gz"
-      sha256 "d5e86f83e5b2cb2fcde9ef4008e998bdff627b67868ad98e75456dabbb0e9f51"
+      sha256 "c0f1935aa250daef541ee1d0653ce7afa1120b5b422894f497353151c8abe8f2"
 
       def install
         bin.install "dfc"
@@ -14,7 +14,7 @@ class Dfc < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/chainguard-dev/dfc/releases/download/v#{version}/dfc_#{version}_darwin_amd64.tar.gz"
-      sha256 "4aea766950a7062035ad38083594867cd39ee34006e878983713f3325ec8dd1f"
+      sha256 "3fcab790b81021e9921a52e02e9dd83d7fa3ee0fc68b333f0a9340d3639b57cf"
 
       def install
         bin.install "dfc"
@@ -25,7 +25,7 @@ class Dfc < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/chainguard-dev/dfc/releases/download/v#{version}/dfc_#{version}_linux_arm64.tar.gz"
-      sha256 "0a470b94f034161eb9133db1c88ea0a206d97751ccacfe58b017d3d4b57d7579"
+      sha256 "a296bf2b302b98ad7ad1b57510131172c4317ade4f9e3305c866191409a30471"
 
       def install
         bin.install "dfc"
@@ -33,7 +33,7 @@ class Dfc < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/chainguard-dev/dfc/releases/download/v#{version}/dfc_#{version}_linux_amd64.tar.gz"
-      sha256 "4514cf2bf6456b83cd27bf5faa3418280eccb898fdb12e0a249c56dba7f1cbf3"
+      sha256 "fed1be98b203b85351b4440e87abeee0f04583c447c94e965745f84c1005460d"
 
       def install
         bin.install "dfc"
