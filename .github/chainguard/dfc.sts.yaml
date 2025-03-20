@@ -1,7 +1,7 @@
 # Allow release tags from our dfc repo running the release workflow to
 # push to the homebrew repo to publish dfc releases.
 issuer: https://token.actions.githubusercontent.com
-subject_pattern: repo:chainguard-dev/dfc:ref:refs/heads/main
+subject_pattern: repo:chainguard-dev/dfc:ref:refs/tags/v.*
 claim_pattern:
   job_workflow_ref: chainguard-dev/dfc/.github/workflows/release.yaml@.*
 
