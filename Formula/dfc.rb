@@ -5,20 +5,20 @@
 class Dfc < Formula
   desc "Convert Dockerfiles to use Chainguard"
   homepage "https://github.com/chainguard-dev/dfc"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.0/dfc_0.5.0_darwin_amd64.tar.gz"
-      sha256 "b58982fa458b0d30ef63aa580f04df814dc7fde39f171fff08a5957bb7f1e1f2"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.1/dfc_0.5.1_darwin_amd64.tar.gz"
+      sha256 "a0ae3db9ce895cb490331c6243c4e9ae7b3b00617f063e651ce1b185a99d8d1f"
 
       def install
         bin.install "dfc" => "dfc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.0/dfc_0.5.0_darwin_arm64.tar.gz"
-      sha256 "c6aee706894feb004b31c25d91a7e6fa21261e3e557ffd747d4aa47f9ad1d6ad"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.1/dfc_0.5.1_darwin_arm64.tar.gz"
+      sha256 "644a147c3fff25126c4e2f309b02e639c87f383fef3bd9566ee2d9b0c63c3f61"
 
       def install
         bin.install "dfc" => "dfc"
@@ -29,8 +29,8 @@ class Dfc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.0/dfc_0.5.0_linux_amd64.tar.gz"
-        sha256 "b8244f8789f2ab78d89f1cc86de401d499dfb5f2fda30508ddf684622fcf2a17"
+        url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.1/dfc_0.5.1_linux_amd64.tar.gz"
+        sha256 "d6c3f38164cb51146c8b288f5d56515910339a49a70b1534f459710dc3b2844a"
 
         def install
           bin.install "dfc" => "dfc"
@@ -39,8 +39,8 @@ class Dfc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.0/dfc_0.5.0_linux_arm64.tar.gz"
-        sha256 "c74dfe2edeaa9f925735edb9d79cc801b37dbe2cb31a88ff4334abd28efae09e"
+        url "https://github.com/chainguard-dev/dfc/releases/download/v0.5.1/dfc_0.5.1_linux_arm64.tar.gz"
+        sha256 "eb84d3efd21d6a9dafa343a9f4efa4a31a1c82b329a0e2563ca9a6ac95476d1c"
 
         def install
           bin.install "dfc" => "dfc"
