@@ -5,20 +5,20 @@
 class Dfc < Formula
   desc "Convert Dockerfiles to use Chainguard"
   homepage "https://github.com/chainguard-dev/dfc"
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.0/dfc_0.7.0_darwin_amd64.tar.gz"
-      sha256 "a084be047d6cd5b90a6e7f8bbc14dde2cce8afee3e5456c72feb3fc90f9c2396"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.1/dfc_0.7.1_darwin_amd64.tar.gz"
+      sha256 "56689d4c88e6f001ea1863db3e1604494ec1a9b0cd8c72f225714b8d9fc8d7b8"
 
       def install
         bin.install "dfc" => "dfc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.0/dfc_0.7.0_darwin_arm64.tar.gz"
-      sha256 "0b5ada2929e23b336437f5d91059d320cef9d442196e3339efacbc57aa88070a"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.1/dfc_0.7.1_darwin_arm64.tar.gz"
+      sha256 "ec6a3f9c3ef6c4cae72c9d02bd2b9ac5894a47ea6f0229f5b70957c8bfca1881"
 
       def install
         bin.install "dfc" => "dfc"
@@ -28,15 +28,15 @@ class Dfc < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.0/dfc_0.7.0_linux_amd64.tar.gz"
-      sha256 "a1d1775e4afba1ab7aaf9290eae18f4498c314f2bd5b286679baee02e1fef2ab"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.1/dfc_0.7.1_linux_amd64.tar.gz"
+      sha256 "e04b8c82a1850cf96d195fa7e6e3cbeee8ba68daf92c0481c2211f7ffbeb0e8d"
       def install
         bin.install "dfc" => "dfc"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.0/dfc_0.7.0_linux_arm64.tar.gz"
-      sha256 "05d25718b476044a52264e5f052322b07774b9d3855a296a615d7e57f0d9006d"
+      url "https://github.com/chainguard-dev/dfc/releases/download/v0.7.1/dfc_0.7.1_linux_arm64.tar.gz"
+      sha256 "8bdf0cebd4ecd31bf9c38ff267f30963de009a63c48568281d90cdb230daad1e"
       def install
         bin.install "dfc" => "dfc"
       end
