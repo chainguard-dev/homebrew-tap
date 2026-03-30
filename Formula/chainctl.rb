@@ -5,20 +5,20 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.2.229"
+  version "0.2.230"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.2.229/chainctl_darwin_x86_64"
-      sha256 "39272ef0ba3432827d9a30bcb08a6a6fd0f84923b7e9a1977c82b9b5df410a09"
+      url "https://dl.enforce.dev/chainctl/0.2.230/chainctl_darwin_x86_64"
+      sha256 "31db196e9b522729db0fd9233a020b105c5120b8d6fb949e148229b3cedef056"
 
       define_method(:install) do
         bin.install "chainctl_darwin_x86_64" => "chainctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.2.229/chainctl_darwin_arm64"
-      sha256 "dcf652202abd0fc094d27efc2f750712345cf7093a767142cba501ea1162360c"
+      url "https://dl.enforce.dev/chainctl/0.2.230/chainctl_darwin_arm64"
+      sha256 "55d8c23424fec35f45a780ccdbdace9badb584a256bab3e13f6470a5fd5482de"
 
       define_method(:install) do
         bin.install "chainctl_darwin_arm64" => "chainctl"
@@ -28,15 +28,15 @@ class Chainctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.2.229/chainctl_linux_x86_64"
-      sha256 "c3e72917d831227871b589d0896b0b4aad31bbc995c12c7c6dcc68d73ba307a3"
+      url "https://dl.enforce.dev/chainctl/0.2.230/chainctl_linux_x86_64"
+      sha256 "76ba657c7dca6fc8c0b2562f017ffb73779af33b6224dce204388ee411186ebb"
       define_method(:install) do
         bin.install "chainctl_linux_x86_64" => "chainctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.2.229/chainctl_linux_arm64"
-      sha256 "1c19a2e153634f1f1f61f6482a280233ab01f8f7744eed26aa7eb257b7ad0657"
+      url "https://dl.enforce.dev/chainctl/0.2.230/chainctl_linux_arm64"
+      sha256 "195e1410ea61f29a5e0eb292ec187494c52592de52505f62bd98251020903194"
       define_method(:install) do
         bin.install "chainctl_linux_arm64" => "chainctl"
       end
