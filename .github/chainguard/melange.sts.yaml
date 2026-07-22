@@ -3,7 +3,9 @@
 issuer: https://token.actions.githubusercontent.com
 subject_pattern: repo:chainguard-dev/melange:ref:refs/heads/main
 claim_pattern:
-  job_workflow_ref: chainguard-dev/melange/.github/workflows/release.yaml@.*
+  # Constrain the workflow revision to main, matching the subject;
+  # `@.*` would accept the workflow from any ref.
+  job_workflow_ref: chainguard-dev/melange/.github/workflows/release.yaml@refs/heads/main
 
 permissions:
   contents: write
