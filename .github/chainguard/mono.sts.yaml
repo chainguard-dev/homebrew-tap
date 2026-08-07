@@ -3,7 +3,11 @@
 issuer: https://token.actions.githubusercontent.com
 subject_pattern: repo:chainguard-dev/mono:ref:refs/tags/v.*
 claim_pattern:
-  job_workflow_ref: chainguard-dev/mono/.github/workflows/.release-drop.yaml@.*
+  # Constrain the workflow revision to the same v* tag refs the subject
+  # requires; `@.*` would accept the workflow from any ref. The release
+  # drop workflow is a local reusable workflow, so its revision is the
+  # calling provision run's tag ref.
+  job_workflow_ref: chainguard-dev/mono/.github/workflows/.release-drop.yaml@refs/tags/v.*
 
 permissions:
   contents: write
