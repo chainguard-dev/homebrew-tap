@@ -5,12 +5,12 @@
 class Chainctl < Formula
   desc "CLI for the Chainguard Platform"
   homepage "https://chainguard.dev"
-  version "0.2.367"
+  version "0.2.368"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.enforce.dev/chainctl/0.2.367/chainctl_darwin_x86_64"
-      sha256 "f11f79fe7752e0c3d2cddfc25eeeb293f224fc50a62bbb2fba4c0c7b26b166b6"
+      url "https://dl.enforce.dev/chainctl/0.2.368/chainctl_darwin_x86_64"
+      sha256 "eab19a3df2f2434642f4700f19657369b7b12cc8a45b1d9f16828f67a9e04743"
 
       define_method(:install) do
         bin.install "chainctl_darwin_x86_64" => "chainctl"
@@ -18,8 +18,8 @@ class Chainctl < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.enforce.dev/chainctl/0.2.367/chainctl_darwin_arm64"
-      sha256 "600c7588b5c828aac0a576303a5bfb536c74b732ee5933bfeefc85f81a4298a6"
+      url "https://dl.enforce.dev/chainctl/0.2.368/chainctl_darwin_arm64"
+      sha256 "c567b4d37abf5174754acd3f02b54adf10dd69c41fa25603524e5ca2d5da98e1"
 
       define_method(:install) do
         bin.install "chainctl_darwin_arm64" => "chainctl"
@@ -30,16 +30,16 @@ class Chainctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.2.367/chainctl_linux_x86_64"
-      sha256 "bcff4043fd7f2cae30e892e93603ba671f8b9faf8f568cb8bed6844a0e5b8be5"
+      url "https://dl.enforce.dev/chainctl/0.2.368/chainctl_linux_x86_64"
+      sha256 "3a13c84d7bed85e59e0bb61394e4f1a94c5d855bdb9c503c7d740a183666b7d7"
       define_method(:install) do
         bin.install "chainctl_linux_x86_64" => "chainctl"
         bin.install_symlink "chainctl" => "docker-credential-cgr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.enforce.dev/chainctl/0.2.367/chainctl_linux_arm64"
-      sha256 "c267e8ee37a60824323dce50efa33983298d5cfb7cc21c1574a1360cec0b65a1"
+      url "https://dl.enforce.dev/chainctl/0.2.368/chainctl_linux_arm64"
+      sha256 "2d2f16f91e6a56666dbe7da2fed2169b0eeed773349442164bb0cd143da230c0"
       define_method(:install) do
         bin.install "chainctl_linux_arm64" => "chainctl"
         bin.install_symlink "chainctl" => "docker-credential-cgr"
