@@ -10,7 +10,7 @@ class Chainctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://dl.enforce.dev/chainctl/0.2.383/chainctl_darwin_x86_64"
-      sha256 "6a012dc24418e329d09a1a7c78fb7d776ae42ffff5cdf07c755ee86972bac27d"
+      sha256 "98e734b4573b462cbc992185f48fc4a9c76c599f1db6b858be711967ebc6c294"
 
       define_method(:install) do
         bin.install "chainctl_darwin_x86_64" => "chainctl"
@@ -19,7 +19,7 @@ class Chainctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://dl.enforce.dev/chainctl/0.2.383/chainctl_darwin_arm64"
-      sha256 "99095200b5e291110d7d0f007ef65d298b3ad715e2270d9f6789e2a9ba771c25"
+      sha256 "5963347ece4f232f278f7d79d76c49e2441cbf1811b483572aeb5b1bbb0441a5"
 
       define_method(:install) do
         bin.install "chainctl_darwin_arm64" => "chainctl"
@@ -31,7 +31,7 @@ class Chainctl < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://dl.enforce.dev/chainctl/0.2.383/chainctl_linux_x86_64"
-      sha256 "12c469c48118d867d90c921c60bc21faa20669fcb23b3480169bc6894f0499eb"
+      sha256 "7784d9e77bc37ed3a676c548d412f0e984aed9da8424c87bee35eb86225084ce"
       define_method(:install) do
         bin.install "chainctl_linux_x86_64" => "chainctl"
         bin.install_symlink "chainctl" => "docker-credential-cgr"
@@ -39,7 +39,7 @@ class Chainctl < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://dl.enforce.dev/chainctl/0.2.383/chainctl_linux_arm64"
-      sha256 "2918ebf51b823bf0891df2d0c65a800dbba6f13eef4299e1409c88b2628b960d"
+      sha256 "0f12ef3bf2dc50d3b713fa023f08a8241015a782e8e3016b563dbd1c789b96cc"
       define_method(:install) do
         bin.install "chainctl_linux_arm64" => "chainctl"
         bin.install_symlink "chainctl" => "docker-credential-cgr"
