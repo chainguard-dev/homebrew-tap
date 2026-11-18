@@ -15,12 +15,13 @@ brew install chainguard-dev/tap/<formula>
 
 ## Formulae
 
-| Repository | Formula                        | Description                                                                              |
-| ---------- | ------------------------------ | -----------------------------------------------------------------------------------------|
-| apko       | [formula](Formula/apko.rb)     | apk-based OCI image builder (see [apko](https://github.com/chainguard-dev/apko))         |
-| chainctl   | [formula](Formula/chainctl.rb) | Chainguard Control                                                                       |
-| dfc        | [formula](Formula/dfc.rb)      | convert Dockerfiles to use Chainguard (see [dfc](https://github.com/chainguard-dev/dfc)) |
-| melange    | [formula](Formula/melange.rb)  | build APKs from source code (see [melange](https://github.com/chainguard-dev/melange))   |
+| Repository | Formula                         | Description                                                                                  |
+| ---------- | ------------------------------- | -------------------------------------------------------------------------------------------- |
+| apko       | [formula](Formula/apko.rb)      | apk-based OCI image builder (see [apko](https://github.com/chainguard-dev/apko))             |
+| chainctl   | [formula](Formula/chainctl.rb)  | Chainguard Control                                                                           |
+| dfc        | [formula](Formula/dfc.rb)       | convert Dockerfiles to use Chainguard (see [dfc](https://github.com/chainguard-dev/dfc))     |
+| go-linear  | [formula](Formula/go-linear.rb) | CLI and Go SDK for Linear (see [go-linear](https://github.com/chainguard-sandbox/go-linear)) |
+| melange    | [formula](Formula/melange.rb)   | build APKs from source code (see [melange](https://github.com/chainguard-dev/melange))       |
 
 ## Documentation
 
