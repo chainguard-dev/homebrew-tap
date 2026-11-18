@@ -1,0 +1,11 @@
+# Allow release tags from chainguard-sandbox/go-linear running its release
+# workflow to push to the homebrew repo to publish go-linear releases.
+issuer: https://token.actions.githubusercontent.com
+subject_pattern: repo:chainguard-sandbox/go-linear:ref:refs/tags/v.*
+claim_pattern:
+  # Constrain the workflow revision to the same v* tag refs the subject
+  # requires; `@.*` would accept the workflow from any ref.
+  job_workflow_ref: chainguard-sandbox/go-linear/.github/workflows/release.yaml@refs/tags/v.*
+
+permissions:
+  contents: write
