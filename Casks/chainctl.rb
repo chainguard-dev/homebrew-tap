@@ -6,28 +6,28 @@ cask "chainctl" do
   binary "chainctl_#{os}_#{arch}", target: "chainctl"
   binary "chainctl_#{os}_#{arch}", target: "docker-credential-cgr"
 
-  version "0.2.411"
+  version "0.2.412"
 
   on_macos do
     on_arm do
-      sha256 "348ccf1666820ec8ee86f180a3ca7f3b976535a52200d7379d4446118b62296a"
+      sha256 "f1c935f609f84f179b7991eb6bb89022cbecd1ab538019e7d12fce69a478981b"
       url "https://dl.enforce.dev/chainctl/#{version}/chainctl_darwin_arm64"
       binary "chainctl_darwin_arm64", target: "chainctl_darwin_arm64"
     end
     on_intel do
-      sha256 "96868fafdb08f8dd8e1bed3eb9291a772b2250c64411298d0ad3326c16d9ca20"
+      sha256 "27922a0de6748480717f37dd6b5a405bc3ab1887b21f20666d69422018be8566"
       url "https://dl.enforce.dev/chainctl/#{version}/chainctl_darwin_x86_64"
       binary "chainctl_darwin_x86_64", target: "chainctl_darwin_x86_64"
     end
   end
   on_linux do
     on_arm do
-      sha256 "ea00e560e0e464f8f91b2b511194caf608422e6035131b1ff14e5244eb49ef40"
+      sha256 "9eb86ba4c3f62c0bf97bd02cea4695a84decfc9a0da43b136b64f8eb5ef2bce3"
       url "https://dl.enforce.dev/chainctl/#{version}/chainctl_linux_arm64"
       binary "chainctl_linux_arm64", target: "chainctl_linux_arm64"
     end
     on_intel do
-      sha256 "2afbaa01b59057329167d20d41d3abde039a813547bad309081344deb2566413"
+      sha256 "e5a249af1d88c55ff61cb7578f1939e6079bcabb93133242b28277a3b591187b"
       url "https://dl.enforce.dev/chainctl/#{version}/chainctl_linux_x86_64"
       binary "chainctl_linux_x86_64", target: "chainctl_linux_x86_64"
     end
